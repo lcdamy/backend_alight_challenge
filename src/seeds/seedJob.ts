@@ -27,7 +27,6 @@ const seedJob = async () => {
                 "Participate in code reviews.",
                 "Troubleshoot and debug applications.",
                 "Stay updated with emerging technologies."
-
             ],
             applicationDeadline: new Date("2024-12-31"),
             applicationLink: "https://example.com/apply/software-engineer",
@@ -127,6 +126,318 @@ const seedJob = async () => {
             ],
             applicationDeadline: new Date("2024-08-31"),
             applicationLink: "https://example.com/apply/marketing-specialist",
+            status: "open"
+        },
+        {
+            position: "DevOps Engineer",
+            positionLeft: 2,
+            applicants: 18,
+            interviewed: 5,
+            rejected: 8,
+            feedbackPending: 2,
+            offered: 1,
+            description: "Maintain and improve CI/CD pipelines and cloud infrastructure.",
+            requirements: [
+                "Bachelor's degree in Computer Science or related field.",
+                "Experience with AWS and Docker."
+            ],
+            responsabilities: [
+                "Implement and manage CI/CD pipelines.",
+                "Monitor system performance and reliability.",
+                "Automate infrastructure provisioning.",
+                "Collaborate with development teams.",
+                "Ensure security best practices."
+            ],
+            applicationDeadline: new Date("2024-12-15"),
+            applicationLink: "https://example.com/apply/devops-engineer",
+            status: "open"
+        },
+        {
+            position: "QA Engineer",
+            positionLeft: 1,
+            applicants: 12,
+            interviewed: 3,
+            rejected: 5,
+            feedbackPending: 1,
+            offered: 0,
+            description: "Test software to ensure quality and reliability.",
+            requirements: [
+                "Bachelor's degree in Computer Science or related field.",
+                "Experience with automated testing tools."
+            ],
+            responsabilities: [
+                "Develop and execute test cases.",
+                "Identify and document bugs.",
+                "Work with developers to resolve issues.",
+                "Maintain test automation scripts.",
+                "Participate in release planning."
+            ],
+            applicationDeadline: new Date("2024-11-20"),
+            applicationLink: "https://example.com/apply/qa-engineer",
+            status: "open"
+        },
+        {
+            position: "HR Manager",
+            positionLeft: 1,
+            applicants: 10,
+            interviewed: 2,
+            rejected: 4,
+            feedbackPending: 1,
+            offered: 1,
+            description: "Manage HR operations and employee relations.",
+            requirements: [
+                "Bachelor's degree in Human Resources or related field.",
+                "Experience in HR management."
+            ],
+            responsabilities: [
+                "Oversee recruitment and onboarding.",
+                "Manage employee relations.",
+                "Develop HR policies.",
+                "Coordinate training programs.",
+                "Ensure compliance with labor laws."
+            ],
+            applicationDeadline: new Date("2024-10-15"),
+            applicationLink: "https://example.com/apply/hr-manager",
+            status: "open"
+        },
+        {
+            position: "Sales Executive",
+            positionLeft: 3,
+            applicants: 22,
+            interviewed: 6,
+            rejected: 10,
+            feedbackPending: 2,
+            offered: 1,
+            description: "Drive sales and build client relationships.",
+            requirements: [
+                "Bachelor's degree in Business or related field.",
+                "Experience in sales."
+            ],
+            responsabilities: [
+                "Identify and pursue sales leads.",
+                "Build and maintain client relationships.",
+                "Achieve sales targets.",
+                "Prepare sales reports.",
+                "Collaborate with marketing team."
+            ],
+            applicationDeadline: new Date("2024-09-25"),
+            applicationLink: "https://example.com/apply/sales-executive",
+            status: "open"
+        },
+        {
+            position: "Content Writer",
+            positionLeft: 2,
+            applicants: 14,
+            interviewed: 4,
+            rejected: 6,
+            feedbackPending: 1,
+            offered: 0,
+            description: "Create engaging content for various platforms.",
+            requirements: [
+                "Bachelor's degree in English, Journalism, or related field.",
+                "Excellent writing skills."
+            ],
+            responsabilities: [
+                "Write articles, blogs, and social media posts.",
+                "Edit and proofread content.",
+                "Research industry topics.",
+                "Collaborate with marketing team.",
+                "Ensure content aligns with brand voice."
+            ],
+            applicationDeadline: new Date("2024-08-20"),
+            applicationLink: "https://example.com/apply/content-writer",
+            status: "open"
+        },
+        {
+            position: "Customer Support Specialist",
+            positionLeft: 2,
+            applicants: 16,
+            interviewed: 5,
+            rejected: 7,
+            feedbackPending: 2,
+            offered: 1,
+            description: "Provide support to customers via various channels.",
+            requirements: [
+                "Bachelor's degree or equivalent experience.",
+                "Strong communication skills."
+            ],
+            responsabilities: [
+                "Respond to customer inquiries.",
+                "Resolve issues and escalate as needed.",
+                "Document support interactions.",
+                "Provide product information.",
+                "Maintain customer satisfaction."
+            ],
+            applicationDeadline: new Date("2024-07-31"),
+            applicationLink: "https://example.com/apply/customer-support-specialist",
+            status: "open"
+        },
+        {
+            position: "Finance Analyst",
+            positionLeft: 1,
+            applicants: 11,
+            interviewed: 3,
+            rejected: 5,
+            feedbackPending: 1,
+            offered: 0,
+            description: "Analyze financial data and prepare reports.",
+            requirements: [
+                "Bachelor's degree in Finance or related field.",
+                "Proficiency in Excel and financial modeling."
+            ],
+            responsabilities: [
+                "Analyze financial statements.",
+                "Prepare financial reports.",
+                "Support budgeting and forecasting.",
+                "Identify financial risks and opportunities.",
+                "Collaborate with finance team."
+            ],
+            applicationDeadline: new Date("2024-10-10"),
+            applicationLink: "https://example.com/apply/finance-analyst",
+            status: "open"
+        },
+        {
+            position: "Network Administrator",
+            positionLeft: 1,
+            applicants: 9,
+            interviewed: 2,
+            rejected: 4,
+            feedbackPending: 1,
+            offered: 0,
+            description: "Manage and maintain network infrastructure.",
+            requirements: [
+                "Bachelor's degree in IT or related field.",
+                "Experience with network hardware and protocols."
+            ],
+            responsabilities: [
+                "Monitor network performance.",
+                "Troubleshoot network issues.",
+                "Install and configure network devices.",
+                "Ensure network security.",
+                "Maintain documentation."
+            ],
+            applicationDeadline: new Date("2024-09-15"),
+            applicationLink: "https://example.com/apply/network-administrator",
+            status: "open"
+        },
+        {
+            position: "Mobile App Developer",
+            positionLeft: 2,
+            applicants: 17,
+            interviewed: 4,
+            rejected: 8,
+            feedbackPending: 2,
+            offered: 1,
+            description: "Develop and maintain mobile applications.",
+            requirements: [
+                "Bachelor's degree in Computer Science or related field.",
+                "Experience with iOS or Android development."
+            ],
+            responsabilities: [
+                "Design and build mobile apps.",
+                "Collaborate with UX/UI designers.",
+                "Test and debug applications.",
+                "Publish apps to app stores.",
+                "Stay updated with mobile trends."
+            ],
+            applicationDeadline: new Date("2024-12-05"),
+            applicationLink: "https://example.com/apply/mobile-app-developer",
+            status: "open"
+        },
+        {
+            position: "Business Analyst",
+            positionLeft: 1,
+            applicants: 13,
+            interviewed: 3,
+            rejected: 6,
+            feedbackPending: 1,
+            offered: 0,
+            description: "Analyze business processes and recommend improvements.",
+            requirements: [
+                "Bachelor's degree in Business or related field.",
+                "Strong analytical skills."
+            ],
+            responsabilities: [
+                "Gather and document business requirements.",
+                "Analyze processes and workflows.",
+                "Identify areas for improvement.",
+                "Collaborate with stakeholders.",
+                "Support project implementation."
+            ],
+            applicationDeadline: new Date("2024-11-10"),
+            applicationLink: "https://example.com/apply/business-analyst",
+            status: "open"
+        },
+        {
+            position: "Graphic Designer",
+            positionLeft: 2,
+            applicants: 19,
+            interviewed: 5,
+            rejected: 9,
+            feedbackPending: 2,
+            offered: 1,
+            description: "Create visual content for digital and print media.",
+            requirements: [
+                "Bachelor's degree in Graphic Design or related field.",
+                "Proficiency with Adobe Creative Suite."
+            ],
+            responsabilities: [
+                "Design graphics for marketing materials.",
+                "Develop branding assets.",
+                "Collaborate with marketing and product teams.",
+                "Prepare files for print and web.",
+                "Stay updated with design trends."
+            ],
+            applicationDeadline: new Date("2024-08-10"),
+            applicationLink: "https://example.com/apply/graphic-designer",
+            status: "open"
+        },
+        {
+            position: "IT Support Specialist",
+            positionLeft: 2,
+            applicants: 15,
+            interviewed: 4,
+            rejected: 7,
+            feedbackPending: 1,
+            offered: 0,
+            description: "Provide technical support to internal teams.",
+            requirements: [
+                "Bachelor's degree in IT or related field.",
+                "Experience with troubleshooting hardware and software."
+            ],
+            responsabilities: [
+                "Respond to IT support requests.",
+                "Install and configure software.",
+                "Troubleshoot hardware issues.",
+                "Maintain IT inventory.",
+                "Document support activities."
+            ],
+            applicationDeadline: new Date("2024-07-20"),
+            applicationLink: "https://example.com/apply/it-support-specialist",
+            status: "open"
+        },
+        {
+            position: "Operations Manager",
+            positionLeft: 1,
+            applicants: 8,
+            interviewed: 2,
+            rejected: 3,
+            feedbackPending: 1,
+            offered: 1,
+            description: "Oversee daily operations and process improvements.",
+            requirements: [
+                "Bachelor's degree in Business or related field.",
+                "Experience in operations management."
+            ],
+            responsabilities: [
+                "Manage daily business operations.",
+                "Optimize processes for efficiency.",
+                "Coordinate with different departments.",
+                "Monitor KPIs and performance.",
+                "Implement operational policies."
+            ],
+            applicationDeadline: new Date("2024-09-05"),
+            applicationLink: "https://example.com/apply/operations-manager",
             status: "open"
         }
     ];

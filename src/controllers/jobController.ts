@@ -5,7 +5,7 @@ import { JobService } from '../services/jobService';
 import { StatusCodes } from "http-status-codes";
 import { formatResponse } from "../utils/helper";
 import { JobDTO } from '../dtos/jobDTO';
-import {jobValidationSchema} from '../utils/validate';
+import { jobValidationSchema } from '../utils/validate';
 import logger from '../config/logger';
 
 
@@ -42,8 +42,10 @@ export const createJob = async (req: Request, res: Response) => {
 export const getAllJobs = async (req: Request, res: Response) => {
     try {
         logger.info('Received request to get all jobs');
-        const jobs = await jobService.getAllJobs();
-        logger.info(`Retrieved ${jobs.length} jobs`);
+        const page = parseInt(req.query.page as string) || 1;
+        const limit = parseInt(req.query.limit as string) || 10;
+        const jobs = await jobService.getAllJobs(page, limit);
+        logger.info(`Retrieved jobs`);
 
         return res.status(StatusCodes.OK).json(formatResponse("success", "Jobs retrieved successfully", jobs));
     } catch (error) {

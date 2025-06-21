@@ -70,8 +70,12 @@ export const createCandidate = async (req: Request, res: Response): Promise<Resp
 export const getAllCandidates = async (req: Request, res: Response): Promise<Response> => {
     try {
         logger.info('Received request to get all candidates');
-        const candidates = await candidateService.getAllCandidates();
-        logger.info(`Retrieved ${candidates.length} candidates`);
+
+        const page = parseInt(req.query.page as string) || 1;
+        const limit = parseInt(req.query.limit as string) || 10;
+
+        const candidates = await candidateService.getAllCandidates(page, limit);
+        logger.info(`Retrieved candidates`);
 
         return res.status(StatusCodes.OK).json(formatResponse("success", "Candidates retrieved successfully", candidates));
     } catch (error) {
@@ -85,7 +89,7 @@ export const getCandidateById = async (req: Request, res: Response): Promise<Res
         const candidateId = req.params.id;
         logger.info(`Received request to get candidate with ID: ${candidateId}`);
 
-        
+
 
         const candidate = await candidateService.getCandidateById(candidateId);
         if (!candidate) {

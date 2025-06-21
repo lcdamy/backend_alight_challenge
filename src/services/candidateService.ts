@@ -32,10 +32,19 @@ export class CandidateService {
         });
     }
 
-    async getAllCandidates(): Promise<Candidate[]> {
-        return await this.candidateRepository.find({
-            order: { createdAt: 'DESC' }
+    async getAllCandidates(page: number, limit: number): Promise<{ data: Candidate[]; total: number; page: number; lastPage: number }> {
+        const skip = (page - 1) * limit;
+        const [result, total] = await this.candidateRepository.findAndCount({
+            order: { createdAt: 'DESC' },
+            skip,
+            take: limit,
         });
+        return {
+            data: result,
+            total,
+            page,
+            lastPage: Math.ceil(total / limit)
+        };
     }
 
     async getCandidateById(candidateId: string): Promise<Candidate | null> {

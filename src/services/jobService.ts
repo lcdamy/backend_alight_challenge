@@ -38,11 +38,20 @@ export class JobService {
         return newJob;
     }
 
-    async getAllJobs(): Promise<Job[]> {
-        return await this.JobRepository.find({
+    async getAllJobs(page: number, limit: number): Promise<{ data: Job[]; total: number; page: number; lastPage: number }> {
+        const skip = (page - 1) * limit;
+        const [result, total] = await this.JobRepository.findAndCount({
             relations: ['user'],
-            order: { createdAt: 'DESC' }
+            order: { createdAt: 'DESC' },
+            skip,
+            take: limit,
         });
+        return {
+            data: result,
+            total,
+            page,
+            lastPage: Math.ceil(total / limit)
+        };
     }
 
     async getJobById(jobId: string): Promise<Job | null> {
