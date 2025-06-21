@@ -137,7 +137,7 @@ export const login = async (req: Request, res: Response): Promise<Response> => {
                     message = "Your account is pending verification. Please check your email to verify your account.";
                     break;
                 default:
-                    message = "Your account status does not allow login. Please contact support.";
+                    message = "Your account cannot be accessed at this time. Please contact support for assistance.";
             }
             logger.error(`User not allowed to login: ${email} (status: ${user.user_status})`);
             return res.status(StatusCodes.FORBIDDEN).json(formatResponse("error", message));
