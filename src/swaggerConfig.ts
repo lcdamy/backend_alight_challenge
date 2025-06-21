@@ -1,6 +1,15 @@
 import swaggerJsdoc from 'swagger-jsdoc';
 // import swaggerUi from 'swagger-ui-express';
 
+const getServerUrl = () => {
+    const host = process.env.HOST || 'localhost';
+    const port = process.env.PORT || 4000;
+    if (host === 'https://backend-alight-challenge.onrender.com') {
+        return host;
+    }
+    return `http://${host}:${port}`;
+};
+
 const options: swaggerJsdoc.Options = {
     definition: {
         openapi: '3.0.0',
@@ -11,8 +20,8 @@ const options: swaggerJsdoc.Options = {
         },
         servers: [
             {
-                url: `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 4000}`,
-                description: 'Development server',
+                url: getServerUrl(),
+                description: 'Production server',
             },
         ],
     },
