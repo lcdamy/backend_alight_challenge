@@ -2,16 +2,14 @@
 
 ## 🧾 Description
 
-This is a backend API for the ALIGHT Challenge, developed using TypeScript.
+This is a backend API for the ALIGHT Challenge, built with TypeScript. The project features integrated CI/CD pipeline, see the Actions tab for workflow details. You can run the API locally by following the setup instructions below, or use Docker Compose to quickly start both the backend and its frontend. Clone the repo, set up your environment, and get started!
 
----
 
 ## 🔗 Live Preview
 
 You can view a live version of this api here:  
 👉 [https://backend-alight-challenge.onrender.com](https://backend-alight-challenge.onrender.com)
 
----
 
 ## 🚀 Getting Started
 
