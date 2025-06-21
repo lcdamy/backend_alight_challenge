@@ -1,0 +1,17 @@
+name: Use GitOps Build and Push Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - release/*
+jobs:
+  build-and-push:
+    uses: techclick-rw/gitops/.github/workflows/build-and-push.yml@main
+    with:
+      docker_image_name: ${{ github.event.repository.name }}
+      dockerfile_path: './Dockerfile'
+    secrets:
+      PUSH_GITHUB_USER: ${{ secrets.PUSH_GITHUB_USER }}
+      PUSH_GITHUB_TOKEN: ${{ secrets.PUSH_GITHUB_TOKEN }}

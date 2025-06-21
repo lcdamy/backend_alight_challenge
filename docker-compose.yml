@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  postgres-db:
+    image: postgres:14
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: rci
+  redis-db:
+    image: redis:6.2
+    restart: always
+    ports:
+      - '6379:6379'
+    environment:
+      REDIS_PASSWORD: crazyPassword
+  minio:
+    image: 'bitnami/minio:latest'
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    environment:
+      - MINIO_ROOT_USER=rci
+      - MINIO_ROOT_PASSWORD=rci2023
+      - MINIO_STORAGE_BACKEND_THRESHOLD=10GB
