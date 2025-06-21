@@ -130,7 +130,7 @@ export class AuthService {
         context.link = resetLink;
         context.link_label = 'Reset your password';
         try {
-            sendEmail('admin_client_expert_email_template', 'Password reset', user.email, context);
+            sendEmail('email_template', 'Password reset', user.email, context);
             logger.info(`Password reset email sent to ${email}`);
         } catch (error) {
             if (error instanceof Error) {

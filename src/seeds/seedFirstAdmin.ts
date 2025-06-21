@@ -47,7 +47,7 @@ const seedFirstAdmin = async () => {
             link: `${frontend_host}/auth/login`,
             link_label: 'Log in to your account'
         };
-        sendEmail('admin_client_expert_email_template', 'Super Admin Account creation', admin_email, context);
+        sendEmail('email_template', 'Super Admin Account creation', admin_email, context);
         console.log("First admin user created successfully");
     } else {
         console.log("Admin user already exists");

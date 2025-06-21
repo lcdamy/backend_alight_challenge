@@ -33,7 +33,7 @@ export class JobService {
             link: `${this.frontend_host}/auth/login`,
             link_label: 'Log in to your account'
         };
-        sendEmail('admin_client_expert_email_template', 'Job creation', user.email, context);
+        sendEmail('email_template', 'Job creation', user.email, context);
 
         return newJob;
     }
