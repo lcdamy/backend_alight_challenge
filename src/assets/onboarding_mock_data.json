@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "Joe Smith",
+        "title": "UX Designer",
+        "AppliedOn": "Jul 3, 2023",
+        "interviewRound": "06/10",
+        "assignedTo": null,
+        "score": 85
+    },
+    {
+        "id": 2,
+        "name": "Jane Doe",
+        "title": "Data Scientist",
+        "AppliedOn": "Jul 4, 2023",
+        "interviewRound": "06/11",
+        "assignedTo": "Peter Cyuzuzo",
+        "score": 90
+    },
+    {
+        "id": 3,
+        "name": "Alice Johnson",
+        "title": "Product Manager",
+        "AppliedOn": "Jul 5, 2023",
+        "interviewRound": "06/12",
+        "assignedTo": null,
+        "score": 78
+    },
+    {
+        "id": 4,
+        "name": "Bob Brown",
+        "title": "DevOps Engineer",
+        "AppliedOn": "Jul 6, 2023",
+        "interviewRound": "06/13",
+        "assignedTo": "Oscar Mugenzi",
+        "score": 88
+    },
+    {
+        "id": 5,
+        "name": "Charlie White",
+        "title": "Marketing Specialist",
+        "AppliedOn": "Jul 7, 2023",
+        "interviewRound": "06/14",
+        "assignedTo": null,
+        "score": 92
+    }
+
+]

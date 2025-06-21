@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Inteview Schedule",
+        "code": "INT-001",
+        "count": 33,
+        "status": "scheduled"
+    },
+    {
+        "name": "Interview Feedback",
+        "code": "INT-002",
+        "count": 12,
+        "status": "pending"
+    },
+    {
+        "name": "Approval",
+        "code": "OFR-001",
+        "count": 5,
+        "status": "pending"
+    },
+    {
+        "name": "Offer Acceptance",
+        "code": "ONB-001",
+        "count": 20,
+        "status": "pending"
+    },
+    {
+        "name": "Documenations",
+        "code": "TRN-001",
+        "count": 15,
+        "status": "pending"
+    },
+    {
+        "name": "Training",
+        "code": "TRN-002",
+        "count": 8,
+        "status": "pending"
+    },
+    {
+        "name": "Supervisor Allocation",
+        "code": "ONB-002",
+        "count": 10,
+        "status": "completed"
+    },
+    {
+        "name": "Project Allocation",
+        "code": "FBC-001",
+        "count": 7,
+        "status": "pending"
+    }
+
+]

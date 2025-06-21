@@ -27,6 +27,35 @@ export const createCandidate = async (req: Request, res: Response): Promise<Resp
             return res.status(StatusCodes.UNAUTHORIZED).json(formatResponse('error', 'User not authenticated'));
         }
 
+        //check if the candidate already exists on email
+        logger.info(`Checking if candidate with email ${candidateData.email} already exists`);
+        const existingCandidate = await candidateService.getCandidateByEmail(candidateData.email);
+        if (existingCandidate) {
+            logger.warn(`Candidate with email ${candidateData.email} already exists`);
+            return res.status(StatusCodes.CONFLICT).json(formatResponse("error", "Candidate with this email already exists"));
+        }
+
+        //check if the candidate already exists on phone number
+        if (candidateData.phoneNumber) {
+            logger.info(`Checking if candidate with phone number ${candidateData.phoneNumber} already exists`);
+            const existingCandidateByPhone = await candidateService.getCandidateByPhone(candidateData.phoneNumber);
+            if (existingCandidateByPhone) {
+                logger.warn(`Candidate with phone number ${candidateData.phoneNumber} already exists`);
+                return res.status(StatusCodes.CONFLICT).json(formatResponse("error", "Candidate with this phone number already exists"));
+            }
+        }
+
+        //check if the candidate already exists on linkedin URL
+        if (candidateData.linkedinURL) {
+            logger.info(`Checking if candidate with LinkedIn URL ${candidateData.linkedinURL} already exists`);
+            const existingCandidateByLinkedIn = await candidateService.getCandidateByLinkedin(candidateData.linkedinURL);
+            if (existingCandidateByLinkedIn) {
+                logger.warn(`Candidate with LinkedIn URL ${candidateData.linkedinURL} already exists`);
+                return res.status(StatusCodes.CONFLICT).json(formatResponse("error", "Candidate with this LinkedIn URL already exists"));
+            }
+        }
+
+
         const newCandidate = await candidateService.createCandidate(candidateData);
         logger.info(`Candidate created with ID: ${newCandidate.id}`);
         // Optionally, you can send an email notification here if needed

@@ -1,7 +1,9 @@
 export interface CandidateCreateDTO {
   names: string;
   gender: "male" | "female";
+  email: string;
   phoneNumber?: string;
+  title?: string;
   linkedinURL?: string;
   profileURL?: string;
   tranings?: string;

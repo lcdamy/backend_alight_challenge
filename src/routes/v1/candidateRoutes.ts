@@ -20,7 +20,13 @@
  *               gender:
  *                 type: string
  *                 enum: [male, female]
+ *               email:
+ *                 type: string
+ *                 nullable: true
  *               phoneNumber:
+ *                 type: string
+ *                 nullable: true
+ *               title:
  *                 type: string
  *                 nullable: true
  *               linkedinURL:
@@ -57,7 +63,9 @@
  *               value:
  *                 names: "Jane Doe"
  *                 gender: "female"
+ *                 email: "example@gmail.com"
  *                 phoneNumber: "+1234567890"
+ *                 title: "Software Engineer"
  *                 linkedinURL: "https://linkedin.com/in/janedoe"
  *                 profileURL: "https://profile.com/janedoe"
  *                 tranings: "06/10"
@@ -71,7 +79,14 @@
  *                 experiences:
  *                   - company: "TechCorp"
  *                     role: "Developer"
- *                     years: 2
+ *                     duration: "May 2021 - Present"
+ *                     responsibilities: "Developing web applications"
+ *                   - company: "TechSolutions"
+ *                     role: "Developer"
+ *                     duration: "Dec 2019 - Apr 2021"
+ *                     responsibilities: "Building software solutions"
+ * 
+ * 
  *     responses:
  *       200:
  *         description: Candidate profile created or updated successfully
@@ -93,6 +108,12 @@
  *                       type: string
  *                       enum: [male, female]
  *                     phoneNumber:
+ *                       type: string
+ *                       nullable: true
+ *                     email:
+ *                       type: string
+ *                       nullable: true
+ *                     title:
  *                       type: string
  *                       nullable: true
  *                     linkedinURL:
@@ -139,6 +160,8 @@
  *                     names: "Jane Doe"
  *                     gender: "female"
  *                     phoneNumber: "+1234567890"
+ *                     email: "example@gmail.com"
+ *                     title: "SR. Software Engineer"
  *                     linkedinURL: "https://linkedin.com/in/janedoe"
  *                     profileURL: "https://profile.com/janedoe"
  *                     tranings: "Agile Project Management"

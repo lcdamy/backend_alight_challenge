@@ -1,23 +1,35 @@
 import { AppDataSource } from "../config/dbConfig";
 import { Candidate } from '../models/Candidate';
 import { CandidateCreateDTO } from '../dtos/candidateDTO';
-import { sendEmail } from "../utils/emailService";
-
-
 
 
 
 export class CandidateService {
-    private frontend_host = process.env.FRONTEND_URL ? process.env.FRONTEND_URL : 'http://localhost:3000';
     private candidateRepository = AppDataSource.getRepository(Candidate);
-
-
 
     //create expert profile
     async createCandidate(Candidate: CandidateCreateDTO): Promise<Candidate> {
         const newCandidate = this.candidateRepository.create(Candidate);
         await this.candidateRepository.save(newCandidate);
         return newCandidate;
+    }
+
+    async getCandidateByEmail(email: string): Promise<Candidate | null> {
+        return await this.candidateRepository.findOne({
+            where: { email },
+        });
+    }
+
+    async getCandidateByPhone(phoneNumber: string): Promise<Candidate | null> {
+        return await this.candidateRepository.findOne({
+            where: { phoneNumber },
+        });
+    }
+
+    async getCandidateByLinkedin(linkedinURL: string): Promise<Candidate | null> {
+        return await this.candidateRepository.findOne({
+            where: { linkedinURL },
+        });
     }
 
     async getAllCandidates(): Promise<Candidate[]> {

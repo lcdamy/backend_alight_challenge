@@ -124,7 +124,7 @@ export class AuthService {
         const token = generateToken({ email: user.email }, 86400);
         const resetLink = `${this.frontend_host}/auth/reset-password?token=${token}`;
         logger.info(`Password reset link generated for email ${email}: ${resetLink}`);
-        context.subject = 'Rwanda Cooperation Password Reset';
+        context.subject = 'Alight HR platform Password Reset';
         context.name = user.firstname + ' ' + user.lastname;
         context.message = 'We received a request to reset your password. This link is valid for 1 hour. Please click the button below to reset your password:';
         context.link = resetLink;

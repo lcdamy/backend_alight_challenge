@@ -264,7 +264,7 @@
  *               token:
  *                 type: string
  *                 example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inp1ZGFuZ2FAZ21haWwuY29tIiwiaWF0IjoxNjE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
- *               password:
+ *               newPassword:
  *                 type: string
  *                 example: "newpassword123"
  *     responses:
@@ -310,9 +310,21 @@
  *           schema:
  *             type: object
  *             properties:
+ *               firstname:
+ *                 type: string
+ *                 example: "Pierre"
+ *               lastname:
+ *                 type: string
+ *                 example: "Damien"
  *               email:
  *                 type: string
  *                 example: "socialuser@gmail.com"
+ *               role:
+ *                 type: string
+ *                 example: "hr"
+ *               profilePictureURL:
+ *                 type: string
+ *                 example: "https://cdn-icons-png.flaticon.com/512/149/149071.png"
  *     responses:
  *       200:
  *         description: Token retrieved successfully

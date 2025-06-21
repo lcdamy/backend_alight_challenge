@@ -4,7 +4,8 @@ import { UserCreateDTO } from "../dtos/userCreateDTO";
 import { UserLoginDTO } from "../dtos/userLoginDTO";
 import { UserForgotPasswordDTO } from "../dtos/userForgotPasswordDTO";
 import { UserResetPasswordDTO } from "../dtos/userResetPasswordDTO";
-import { userLoginValidationSchema, userValidationSchema, userForgotPasswordDTO, userResetPasswordDTO } from "../utils/validate";
+import { UserSocialLoginDTO } from "../dtos/userSocialLoginDTO";
+import { userLoginValidationSchema, userValidationSchema, userForgotPasswordDTO, userResetPasswordDTO, userSocialLoginValidationSchema } from "../utils/validate";
 import { StatusCodes } from "http-status-codes";
 import { formatResponse, verifyToken, generateToken } from "../utils/helper";
 import { sendEmail } from "../utils/emailService";
@@ -51,32 +52,32 @@ export const register = async (req: Request, res: Response): Promise<Response> =
 
 export const getTokenByEmail = async (req: Request, res: Response): Promise<Response> => {
     try {
-        const { email, firstname, lastname, picture, role } = req.body;
-
-        // Validate required fields
-        if (!email || !firstname || !lastname || !role) {
-            logger.error("Missing required fields: email, name, or role");
-            return res.status(StatusCodes.BAD_REQUEST).json(formatResponse('error', 'Email, name, and role are required'));
+        const socialLoginDTO: UserSocialLoginDTO = req.body;
+        // Validate the social login data
+        const { error } = userSocialLoginValidationSchema.validate(socialLoginDTO);
+        if (error) {
+            logger.error(`Validation error: ${error.details[0].message}`);
+            return res.status(StatusCodes.BAD_REQUEST).json(formatResponse('error', error.details[0].message));
         }
 
         // Check if the user already exists
-        let user = await authService.findUserByEmail(email);
+        let user = await authService.findUserByEmail(socialLoginDTO.email);
 
         if (!user) {
-            logger.info(`User not found, creating new user: ${email}`);
+            logger.info(`User not found, creating new user: ${socialLoginDTO.email}`);
             const socialDTO: UserCreateDTO = {
-                email,
-                firstname: firstname,
-                lastname: lastname,
-                profilePictureURL: picture || 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
-                role,
+                email: socialLoginDTO.email,
+                firstname: socialLoginDTO.firstname,
+                lastname: socialLoginDTO.lastname,
+                profilePictureURL: socialLoginDTO.profilePictureURL || 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+                role: socialLoginDTO.role || 'hr', // Default to 'hr' if no role is provided
                 registrationType: 'google',
                 password: Math.random().toString(36).slice(-8), // Generate a random password
                 user_status: 'active',
             };
 
 
-            const result = await authService.register({ ...socialDTO, roles: role });
+            const result = await authService.register({ ...socialDTO, roles: socialLoginDTO.role });
             user = Array.isArray(result) ? result[0] : result;
 
             if (Array.isArray(result)) {
@@ -84,7 +85,7 @@ export const getTokenByEmail = async (req: Request, res: Response): Promise<Resp
             } else {
                 logger.info(`New user created: ${user.email}`);
             }
-            await sendWelcomeEmail(user, role, 'social');
+            await sendWelcomeEmail(user, socialLoginDTO.role, 'social');
         }
 
         // Generate a token for the user
@@ -99,7 +100,7 @@ export const getTokenByEmail = async (req: Request, res: Response): Promise<Resp
             86400 // Token expiration time in seconds (1 day)
         );
 
-        logger.info(`Token generated for user: ${email}`);
+        logger.info(`Token generated for user: ${socialLoginDTO.email}`);
         return res.status(StatusCodes.OK).json(formatResponse('success', 'Social Login successful', { token }));
     } catch (err) {
         const errorMessage = (err as Error).message;
@@ -243,7 +244,7 @@ const sendWelcomeEmail = async (user: any, role: string, type: string) => {
     const context = {
         year: new Date().getFullYear(),
         logo_url: process.env.LOGO_URL,
-        subject: 'Welcome to Alight HR Application challenge',
+        subject: 'Welcome to Alight HR platform',
         name: user.names,
         message: '',
         link: '',
@@ -255,11 +256,11 @@ const sendWelcomeEmail = async (user: any, role: string, type: string) => {
         context.message = message;
         context.link_label = linkLabel;
         context.link = `${frontend_host}/auth/login?token=${token}`;
-        sendEmail('admin_client_expert_email_template', 'Welcome to Rwanda Cooperation', user.email, context);
+        sendEmail('admin_client_expert_email_template', 'Welcome to Alight HR platform', user.email, context);
     };
 
     await sendEmailWithContext(
-        `Welcome to the Alight HR Application challenge! An admin account has been created for you. To get started, please verify your account by clicking the link below.`,
+        `Welcome to the Alight HR platform! An admin account has been created for you. To get started, please verify your account by clicking the link below.`,
         'Verify your account'
     );
 };

@@ -1,0 +1,178 @@
+{
+    "today": [
+        {
+            "id": 1,
+            "topic": "Interview",
+            "candidate_name": "Mini Samantha",
+            "position": "Software Engineer",
+            "phase": "4th Round",
+            "time": "10:00 AM",
+            "duration": "10:00 AM - 11:00 AM",
+            "status": "passed"
+        },
+        {
+            "id": 2,
+            "topic": "Interview",
+            "candidate_name": "John Doe",
+            "position": "Data Scientist",
+            "phase": "3rd Round",
+            "time": "11:00 AM",
+            "duration": "11:00 AM - 12:00 PM",
+            "status": "scheduled"
+        },
+        {
+            "id": 3,
+            "topic": "Interview",
+            "candidate_name": "Alice Smith",
+            "position": "Product Manager",
+            "phase": "2nd Round",
+            "time": "1:00 PM",
+            "duration": "1:00 PM - 2:00 PM",
+            "status": "scheduled"
+        },
+        {
+            "id": 4,
+            "topic": "Interview",
+            "candidate_name": "Bob Johnson",
+            "position": "UX Designer",
+            "phase": "1st Round",
+            "time": "3:00 PM",
+            "duration": "3:00 PM - 4:00 PM",
+            "status": "scheduled"
+        }
+    ],
+    "Tomorrow": [
+        {
+            "id": 5,
+            "topic": "Interview",
+            "candidate_name": "Charlie Brown",
+            "position": "DevOps Engineer",
+            "phase": "Final Round",
+            "time": "10:00 AM",
+            "duration": "10:00 AM - 11:00 AM",
+            "status": "scheduled"
+        },
+        {
+            "id": 6,
+            "topic": "Interview",
+            "candidate_name": "Diana Prince",
+            "position": "Marketing Specialist",
+            "phase": "3rd Round",
+            "time": "11:00 AM",
+            "duration": "11:00 AM - 12:00 PM",
+            "status": "passed"
+        },
+        {
+            "id": 7,
+            "topic": "Interview",
+            "candidate_name": "Ethan Hunt",
+            "position": "Systems Analyst",
+            "phase": "2nd Round",
+            "time": "1:00 PM",
+            "duration": "1:00 PM - 2:00 PM",
+            "status": "scheduled"
+        },
+        {
+            "id": 8,
+            "topic": "Interview",
+            "candidate_name": "Fiona Gallagher",
+            "position": "HR Manager",
+            "phase": "1st Round",
+            "time": "3:00 PM",
+            "duration": "3:00 PM - 4:00 PM",
+            "status": "scheduled"
+        }
+    ],
+    "week": [
+        {
+            "id": 9,
+            "topic": "Interview",
+            "candidate_name": "George Costanza",
+            "position": "Software Tester",
+            "phase": "Final Round",
+            "time": "10:00 AM",
+            "duration": "10:00 AM - 11:00 AM",
+            "status": "scheduled"
+        },
+        {
+            "id": 10,
+            "topic": "Interview",
+            "candidate_name": "Hannah Baker",
+            "position": "Content Writer",
+            "phase": "3rd Round",
+            "time": "Sep 3",
+            "duration": "11:00 AM - 12:00 PM",
+            "status": "passed"
+        },
+        {
+            "id": 11,
+            "topic": "Interview",
+            "candidate_name": "Ian Malcolm",
+            "position": "Data Analyst",
+            "phase": "2nd Round",
+            "time": "Sep 4",
+            "duration": "1:00 PM - 2:00 PM",
+            "status": "scheduled"
+        },
+        {
+            "id": 12,
+            "topic": "Interview",
+            "candidate_name": "Julia Roberts",
+            "position": "Graphic Designer",
+            "phase": "1st Round",
+            "time": "Sep 5",
+            "duration": "3:00 PM - 4:00 PM",
+            "status": "scheduled"
+        },
+        {
+            "id": 13,
+            "topic": "Interview",
+            "candidate_name": "Kevin Hart",
+            "position": "Network Engineer",
+            "phase": "Final Round",
+            "time": "Sep 6",
+            "duration": "10:00 AM - 11:00 AM",
+            "status": "scheduled"
+        },
+        {
+            "id": 14,
+            "topic": "Interview",
+            "candidate_name": "Laura Croft",
+            "position": "Business Analyst",
+            "phase": "3rd Round",
+            "time": "Sep 7",
+            "duration": "11:00 AM - 12:00 PM",
+            "status": "passed"
+        },
+        {
+            "id": 15,
+            "topic": "Interview",
+            "candidate_name": "Mike Wazowski",
+            "position": "Cloud Architect",
+            "phase": "2nd Round",
+            "time": "Sep 8",
+            "duration": "1:00 PM - 2:00 PM",
+            "status": "scheduled"
+        },
+        {
+            "id": 16,
+            "topic": "Interview",
+            "candidate_name": "Nina Simone",
+            "position": "Cybersecurity Analyst",
+            "phase": "1st Round",
+            "time": "Sep 9",
+            "duration": "3:00 PM - 4:00 PM",
+            "status": "scheduled"
+        },
+        {
+            "id": 17,
+            "topic": "Interview",
+            "candidate_name": "Oscar Wilde",
+            "position": "IT Support Specialist",
+            "phase": "Final Round",
+            "time": "Sep 10",
+            "duration": "10:00 AM - 11:00 AM",
+            "status": "scheduled"
+        }
+    ]
+}

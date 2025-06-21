@@ -66,6 +66,19 @@ export const userValidationSchema = Joi.object({
     profilePictureURL: uriField('Profile picture URL')
 });
 
+export const userSocialLoginValidationSchema = Joi.object({
+    firstname: createStringField(2, 'First name'),
+    lastname: createStringField(2, 'Last name'),
+    email: emailField,
+    role: Joi.string().valid('hr', 'admin').required().messages({
+        'any.only': 'Role must be either hr or admin',
+        'any.required': requiredFieldMessage('Role')
+    }),
+    profilePictureURL: uriField('Profile picture URL').optional()
+}).messages({
+    'object.unknown': 'Unexpected field in social login data'
+});
+
 export const userLoginValidationSchema = Joi.object({
     email: emailField,
     password: passwordField
@@ -74,11 +87,15 @@ export const userLoginValidationSchema = Joi.object({
 });
 
 export const userResetPasswordDTO = Joi.object({
-    email: emailField,
-    password: passwordField
+    token: Joi.string().required().messages({
+        'string.empty': 'Token cannot be an empty field',
+        'any.required': requiredFieldMessage('Token')
+    }),
+    newPassword: passwordField
 }).messages({
     'object.unknown': 'Unexpected field in reset password data'
 });
+
 
 export const userForgotPasswordDTO = Joi.object({
     email: emailField
@@ -89,7 +106,9 @@ export const userForgotPasswordDTO = Joi.object({
 export const candidateValidationSchema = Joi.object({
     names: createStringField(2, 'Names'),
     gender: genderField,
+    email: emailField,
     phoneNumber: phoneNumberField,
+    title: createStringField(2, 'Title').optional(),
     linkedinURL: uriField('LinkedIn URL').optional(),
     profileURL: uriField('Profile URL').optional(),
     tranings: Joi.string().optional().messages({

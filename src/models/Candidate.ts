@@ -13,7 +13,13 @@ export class Candidate {
     gender!: string;
 
     @Column({ nullable: true })
+    email!: string;
+
+    @Column({ nullable: true })
     phoneNumber!: string;
+
+    @Column({ nullable: true })
+    title!: string;
 
     @Column({ nullable: true })
     linkedinURL!: string;
