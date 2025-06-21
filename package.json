@@ -9,7 +9,9 @@
     "start": "node app/app.js",
     "dev": "nodemon src/app.ts",
     "seed:admin": "ts-node src/seeds/seedFirstAdmin.ts",
-    "seed:all": "npm run seed:admin"
+    "seed:jobs": "ts-node src/seeds/seedJob.ts",
+    "seed:candidates": "ts-node src/seeds/seedCandidate.ts",
+    "seed:all": "npm run seed:admin && npm run seed:jobs && npm run seed:candidates"
   },
   "author": "lcdamy",
   "license": "ISC",
