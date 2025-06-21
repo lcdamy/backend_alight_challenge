@@ -4,6 +4,7 @@ import { StatusCodes } from "http-status-codes";
 import { formatResponse } from "../utils/helper";
 import logger from '../config/logger';
 
+
 const auditService = new AuditService();
 
 // get all audit logs
