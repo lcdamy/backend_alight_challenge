@@ -1,4 +1,4 @@
-# RCI-API
+# ALIGHT-HR-PLATFORM-CHALLENGE-API
 
 ## 🧾 Description
 
