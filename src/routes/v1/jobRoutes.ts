@@ -284,6 +284,19 @@
  *     tags: [Jobs]
  *     security:
  *       - bearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           default: 1
+ *         description: The page number to retrieve
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 10
+ *         description: The number of items per page
  *     responses:
  *       200:
  *         description: List of jobs retrieved successfully
