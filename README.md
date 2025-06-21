@@ -68,6 +68,36 @@ npm run seed:all
 
 > **Note:** The built files will be in the `app` directory.
 
+
+📁 Folder Structure
+
+```
+backend_alight_challenge/
+├── public/
+├── src/
+│   ├── assets/         # mocks data
+│   ├── config/         # db config.ts & logger.ts
+│   ├── controllers/    # has five controllers
+│   ├── cronjobs/       # has a schedules.ts (This is useful to check system health)
+│   ├── dtos/           # Contains TypeScript types and interfaces used as Data Transfer Objects (DTOs)
+│   ├── middlewares/    # Contains three files for handling request interception and custom logic
+│   ├── models/         # Contains four files that hold the system schema
+│   ├── routes/         # This te folder which hold all the routes (endpoints)
+│   ├── seeds/          # Contains three files which are used to seeds the database, for at least some initial data
+│   ├── services/       # Contains service layer logic to encapsulate business rules and support the MVC architecture
+│   ├── templates/      # Contains templates; currently includes a single template used by the email service
+│   ├── utils/          # Contains utility functions and helpers, including email service, general helpers, and validation logic
+│   ├── app.ts
+│   └── main.tsx
+├── .env
+├── .gitignore
+├── combined.log
+├── docker-compose.yml
+├── Dockerfile
+├── package.json
+└── README.md
+```
+
 ## 👥 Contributors
 
 - [lcdamy](https://www.linkedin.com/in/pierre-damien-murindangabo-cyuzuzo-709b53151/)
