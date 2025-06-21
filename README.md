@@ -77,8 +77,8 @@ backend_alight_challenge/
 ├── src/
 │   ├── assets/         # mocks data
 │   ├── config/         # db config.ts & logger.ts
-│   ├── controllers/    # has five controllers
-│   ├── cronjobs/       # has a schedules.ts (This is useful to check system health)
+│   ├── controllers/    # Contains five controllers responsible for handling incoming requests and coordinating responses
+│   ├── cronjobs/       # Contains scheduled tasks (e.g., schedules.ts for system health checks)
 │   ├── dtos/           # Contains TypeScript types and interfaces used as Data Transfer Objects (DTOs)
 │   ├── middlewares/    # Contains three files for handling request interception and custom logic
 │   ├── models/         # Contains four files that hold the system schema
