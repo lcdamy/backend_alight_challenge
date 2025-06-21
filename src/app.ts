@@ -32,7 +32,7 @@ const configureMiddlewares = () => {
 
 const configureRoutes = () => {
     app.use('/api', routes); // Main API routes
-    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs)); // Swagger docs
+    app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpecs)); // Swagger docs
 
 };
 
@@ -44,7 +44,7 @@ const startServer = async () => {
         configureRoutes();
         server.listen(port, () => {
             console.log(`🚀 Server running at http://${host}:${port}`);
-            console.log(`📘 Swagger docs available at http://${host}:${port}/api-docs`);
+            console.log(`📘 Swagger docs available at http://${host}:${port}`);
         });
     } catch (error) {
         console.error('❌ Error starting server:', error);
