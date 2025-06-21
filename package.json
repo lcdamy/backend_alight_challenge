@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "tsc --build",
-    "start": "cross-env TZ=Africa/Kigali node app/app.js",
-    "dev": "cross-env TZ=Africa/Kigali nodemon src/app.ts",
+    "start": "node app/app.js",
+    "dev": "nodemon src/app.ts",
     "seed:admin": "ts-node src/seeds/seedFirstAdmin.ts",
     "seed:all": "npm run seed:admin"
   },

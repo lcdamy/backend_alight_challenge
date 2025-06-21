@@ -1,17 +1,45 @@
-name: Use GitOps Build and Push Workflow
+name: run-api-ci-cd
 
 on:
   push:
     branches:
       - main
-      - develop
-      - release/*
+  pull_request:
+    branches:
+      - main
+
 jobs:
-  build-and-push:
-    uses: techclick-rw/gitops/.github/workflows/build-and-push.yml@main
-    with:
-      docker_image_name: ${{ github.event.repository.name }}
-      dockerfile_path: './Dockerfile'
-    secrets:
-      PUSH_GITHUB_USER: ${{ secrets.PUSH_GITHUB_USER }}
-      PUSH_GITHUB_TOKEN: ${{ secrets.PUSH_GITHUB_TOKEN }}
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install packages
+        run: npm install
+
+      - name: build docker image
+        run: docker build -t lcdamy/backend-alight-challenge:1.0 ./
+
+      - name: log in to DockerHub
+        run: echo ${{ secrets.DOCKER_SECRET }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+      - name: push docker image to dockerhub
+        run: docker push lcdamy/backend-alight-challenge:1.0
+
+      - name: Install Heroku CLI
+        run: curl https://cli-assets.heroku.com/install.sh | sh
+
+      - name: Deploy to Render
+        uses: JorgeLNJunior/render-deploy@v1.4.5
+        with:
+          service_id: 'srv-cuk74mogph6c73bo5bfg'
+          api_key: 'rnd_deuDq33XwResEJRgxT8qwetQQ8lJ'
+          wait_deploy: true
+          github_deployment: true
+          deployment_environment: 'production'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          clear_cache: true
+
