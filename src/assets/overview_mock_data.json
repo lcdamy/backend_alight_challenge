@@ -1,51 +1,50 @@
 [
     {
-        "name": "Inteview Schedule",
-        "code": "INT-001",
-        "count": 33,
-        "status": "scheduled"
-    },
-    {
-        "name": "Interview Feedback",
-        "code": "INT-002",
+        "title": "Interview scheduled",
         "count": 12,
+        "imageSrc": "/Illustrations-1.png",
         "status": "pending"
     },
     {
-        "name": "Approval",
-        "code": "OFR-001",
+        "title": "Interview Feedback",
         "count": 5,
+        "imageSrc": "/Illustrations-2.png",
         "status": "pending"
     },
     {
-        "name": "Offer Acceptance",
-        "code": "ONB-001",
-        "count": 20,
+        "title": "Approval",
+        "count": 3,
+        "imageSrc": "/Illustrations-3.png",
         "status": "pending"
     },
     {
-        "name": "Documenations",
-        "code": "TRN-001",
-        "count": 15,
+        "title": "Offer Acceptance",
+        "count": 2,
+        "imageSrc": "/Illustrations-4.png",
         "status": "pending"
     },
     {
-        "name": "Training",
-        "code": "TRN-002",
-        "count": 8,
+        "title": "Documenations",
+        "count": 1,
+        "imageSrc": "/Illustrations-5.png",
         "status": "pending"
     },
     {
-        "name": "Supervisor Allocation",
-        "code": "ONB-002",
-        "count": 10,
+        "title": "Training",
+        "count": 4,
+        "imageSrc": "/Illustrations-6.png",
         "status": "completed"
     },
     {
-        "name": "Project Allocation",
-        "code": "FBC-001",
-        "count": 7,
+        "title": "Supervisor Allocation",
+        "count": 2,
+        "imageSrc": "/Illustrations-7.png",
+        "status": "pending"
+    },
+    {
+        "title": "Project Allocation",
+        "count": 0,
+        "imageSrc": "/Illustrations-8.png",
         "status": "pending"
     }
-
 ]
