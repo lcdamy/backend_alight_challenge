@@ -132,7 +132,7 @@ const seedCandidate = async () => {
             tranings: "04/10",
             documentation: "03/8",
             supervisor: "Tom White",
-            project: "Testing Automation",
+            project: "Testing",
             educations: [
                 {
                     degree: "BSc Quality Assurance",
@@ -198,7 +198,7 @@ const seedCandidate = async () => {
             tranings: "06/10",
             documentation: "06/8",
             supervisor: "Chris Evans",
-            project: "Mobile App Redesign",
+            project: "Mobile",
             educations: [
                 {
                     degree: "BA Graphic Design",
@@ -264,7 +264,7 @@ const seedCandidate = async () => {
             tranings: "10/10",
             documentation: "08/8",
             supervisor: "Mark Taylor",
-            project: "Predictive Analytics",
+            project: "Predictive AI",
             educations: [
                 {
                     degree: "MSc Data Science",
@@ -297,7 +297,7 @@ const seedCandidate = async () => {
             tranings: "07/10",
             documentation: "05/8",
             supervisor: "Nina Brooks",
-            project: "E-commerce Platform",
+            project: "E-commerce",
             educations: [
                 {
                     degree: "BSc Computer Science",
@@ -330,7 +330,7 @@ const seedCandidate = async () => {
             tranings: "06/10",
             documentation: "04/8",
             supervisor: "Paul Adams",
-            project: "Process Optimization",
+            project: "Process",
             educations: [
                 {
                     degree: "BBA",
@@ -363,7 +363,7 @@ const seedCandidate = async () => {
             tranings: "08/10",
             documentation: "06/8",
             supervisor: "Sophie Miller",
-            project: "Mobile Banking App",
+            project: "Mobile Banking",
             educations: [
                 {
                     degree: "BSc Information Systems",
@@ -396,7 +396,7 @@ const seedCandidate = async () => {
             tranings: "09/10",
             documentation: "07/8",
             supervisor: "George Hall",
-            project: "Agile Transformation",
+            project: "Agile",
             educations: [
                 {
                     degree: "BSc Project Management",
@@ -429,7 +429,7 @@ const seedCandidate = async () => {
             tranings: "10/10",
             documentation: "08/8",
             supervisor: "Rachel Moore",
-            project: "Cloud Infrastructure",
+            project: "Cloud",
             educations: [
                 {
                     degree: "MSc Cloud Computing",
@@ -528,7 +528,6 @@ const seedCandidate = async () => {
             tranings: "07/10",
             documentation: "05/8",
             supervisor: "Samuel Walker",
-            project: "Employee Engagement",
             educations: [
                 {
                     degree: "BSc Human Resources",
@@ -593,8 +592,6 @@ const seedCandidate = async () => {
             profileURL: "https://example.com/profiles/lilywalker",
             tranings: "08/10",
             documentation: "06/8",
-            supervisor: "David Harris",
-            project: "Product Launch Campaign",
             educations: [
                 {
                     degree: "MBA Marketing",
@@ -659,8 +656,6 @@ const seedCandidate = async () => {
             profileURL: "https://example.com/profiles/ellarobinson",
             tranings: "06/10",
             documentation: "04/8",
-            supervisor: "Matthew King",
-            project: "Documentation Overhaul",
             educations: [
                 {
                     degree: "BA English",
@@ -759,7 +754,6 @@ const seedCandidate = async () => {
             tranings: "06/10",
             documentation: "04/8",
             supervisor: "Victoria Clark",
-            project: "Customer Support Portal",
             educations: [
                 {
                     degree: "BSc Information Systems",
