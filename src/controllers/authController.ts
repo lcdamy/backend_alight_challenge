@@ -255,7 +255,7 @@ const sendWelcomeEmail = async (user: any, role: string, type: string) => {
         const token = generateToken({ email: user.email }, 86400);
         context.message = message;
         context.link_label = linkLabel;
-        context.link = `${frontend_host}/auth/login?token=${token}`;
+        context.link = `${frontend_host}/login?token=${token}`;
         sendEmail('email_template', 'Welcome to Alight HR platform', user.email, context);
     };
 

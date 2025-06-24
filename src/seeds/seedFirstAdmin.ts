@@ -44,7 +44,7 @@ const seedFirstAdmin = async () => {
             message: `Congratulations on becoming the Super Admin of alight HR Platform! As a Super Admin, you have full access to the system and the ability to manage all aspects of the platform. 
             Here is your temporary password: ${admin_password}. We highly recommend changing it after logging in for security purposes. 
             Thank you for taking on this important role!`,
-            link: `${frontend_host}/auth/login`,
+            link: `${frontend_host}/login`,
             link_label: 'Log in to your account'
         };
         sendEmail('email_template', 'Super Admin Account creation', admin_email, context);
