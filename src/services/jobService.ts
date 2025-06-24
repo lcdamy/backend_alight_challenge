@@ -30,7 +30,7 @@ export class JobService {
             subject: 'Job Created Successfully',
             name: user.firstname,
             message: `Your job titled "${newJob.position}" has been successfully created.`,
-            link: `${this.frontend_host}/auth/login`,
+            link: `${this.frontend_host}/login`,
             link_label: 'Log in to your account'
         };
         sendEmail('email_template', 'Job creation', user.email, context);

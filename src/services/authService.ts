@@ -122,7 +122,7 @@ export class AuthService {
         user.user_status = "deactivated";
         await this.userRepository.save(user);
         const token = generateToken({ email: user.email }, 86400);
-        const resetLink = `${this.frontend_host}/auth/reset-password?token=${token}`;
+        const resetLink = `${this.frontend_host}/reset-password?token=${token}`;
         logger.info(`Password reset link generated for email ${email}: ${resetLink}`);
         context.subject = 'Alight HR platform Password Reset';
         context.name = user.firstname + ' ' + user.lastname;
