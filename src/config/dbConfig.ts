@@ -21,10 +21,9 @@ export const AppDataSource = new DataSource({
         Candidate,
         Job,
         AuditLog,
-
     ],
     synchronize: true,
-    ssl: true,
+    ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
     extra: {
         ssl: {
             rejectUnauthorized: false, // Accept self-signed certs (for dev only)
