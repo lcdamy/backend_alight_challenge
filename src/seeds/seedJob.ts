@@ -249,7 +249,7 @@ const seedJob = async () => {
             status: "open"
         },
         {
-            position: "Customer Support Specialist",
+            position: "Customer Support",
             positionLeft: 2,
             applicants: 16,
             interviewed: 5,
