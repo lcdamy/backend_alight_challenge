@@ -27,7 +27,7 @@ const seedFirstAdmin = async () => {
             password: hashedPassword,
             role: "admin",
             registrationType: "email",
-            profilePictureURL: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            profilePictureURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             firstname: "Super",
             lastname: "Admin",
             user_status: 'active'

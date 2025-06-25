@@ -31,7 +31,7 @@ export class User {
     @Column({ enum: ["active", "deactivated", "pending"], default: "pending" })
     user_status!: string;
 
-    @Column({ nullable: true, default: "https://cdn-icons-png.flaticon.com/512/149/149071.png" })
+    @Column({ nullable: true, default: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png" })
     profilePictureURL!: string;
 
     @CreateDateColumn()

@@ -7,43 +7,43 @@
     },
     {
         "title": "Interview Feedback",
-        "count": 5,
+        "count": 50,
         "imageSrc": "/Illustrations-2.png",
         "status": "pending"
     },
     {
         "title": "Approval",
-        "count": 3,
+        "count": 30,
         "imageSrc": "/Illustrations-3.png",
         "status": "pending"
     },
     {
         "title": "Offer Acceptance",
-        "count": 2,
+        "count": 21,
         "imageSrc": "/Illustrations-4.png",
         "status": "pending"
     },
     {
         "title": "Documenations",
-        "count": 1,
+        "count": 17,
         "imageSrc": "/Illustrations-5.png",
         "status": "pending"
     },
     {
         "title": "Training",
-        "count": 4,
+        "count": 43,
         "imageSrc": "/Illustrations-6.png",
         "status": "completed"
     },
     {
         "title": "Supervisor Allocation",
-        "count": 2,
+        "count": 22,
         "imageSrc": "/Illustrations-7.png",
         "status": "pending"
     },
     {
         "title": "Project Allocation",
-        "count": 0,
+        "count": 29,
         "imageSrc": "/Illustrations-8.png",
         "status": "pending"
     }

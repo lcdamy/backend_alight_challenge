@@ -37,6 +37,9 @@ export class Candidate {
     supervisor!: string;
 
     @Column({ nullable: true })
+    supervisorProfile!: string;
+
+    @Column({ nullable: true })
     project!: string;
 
     @Column("simple-json", { nullable: true })

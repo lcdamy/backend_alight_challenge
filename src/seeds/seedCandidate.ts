@@ -15,10 +15,11 @@ const seedCandidate = async () => {
             phoneNumber: "+1234567890",
             title: "Software Engineer",
             linkedinURL: "https://linkedin.com/in/johndoe",
-            profileURL: "https://example.com/profiles/johndoe",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1748604165344-pngtree-an-anime-with-glasses-and-scarves-image_2694420.jpg",
             tranings: "05/10",
             documentation: "02/8",
             supervisor: "Jane Smith",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Backend Revamp",
             educations: [
                 {
@@ -62,10 +63,11 @@ const seedCandidate = async () => {
             phoneNumber: "+1987654321",
             title: "Frontend Developer",
             linkedinURL: "https://linkedin.com/in/alicesmith",
-            profileURL: "https://example.com/profiles/alicesmith",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843309021-204947806-student-avatar-illustration-simple-cartoon-user-portrait-user-profile-icon-youth-avatar-vector.jpg",
             tranings: "03/10",
             documentation: "01/8",
             supervisor: "Bob Johnson",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "UI Redesign",
             educations: [
                 {
@@ -95,11 +97,12 @@ const seedCandidate = async () => {
             phoneNumber: "+1123456789",
             title: "DevOps Engineer",
             linkedinURL: "https://linkedin.com/in/michaelbrown",
-            profileURL: "https://example.com/profiles/michaelbrown",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843309021-204947806-student-avatar-illustration-simple-cartoon-user-portrait-user-profile-icon-youth-avatar-vector.jpg",
             tranings: "07/10",
             documentation: "05/8",
             supervisor: "Sara Lee",
             project: "Cloud Migration",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             educations: [
                 {
                     degree: "BEng Software Engineering",
@@ -128,10 +131,11 @@ const seedCandidate = async () => {
             phoneNumber: "+1098765432",
             title: "QA Analyst",
             linkedinURL: "https://linkedin.com/in/lindagreen",
-            profileURL: "https://example.com/profiles/lindagreen",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843460942-businessman-avatar-illustration-simple-cartoon-user-portrait-user-profile-icon-business-leader-vector-illustration-2PP26E1.jpg",
             tranings: "04/10",
             documentation: "03/8",
             supervisor: "Tom White",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Testing",
             educations: [
                 {
@@ -161,10 +165,11 @@ const seedCandidate = async () => {
             phoneNumber: "+1012345678",
             title: "Product Manager",
             linkedinURL: "https://linkedin.com/in/davidlee",
-            profileURL: "https://example.com/profiles/davidlee",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843508588-pngtree-cute-cartoon-avatar-icon-of-cool-man-wearing-glasses-and-black-vector-png-image_16306748.png",
             tranings: "09/10",
             documentation: "07/8",
             supervisor: "Emma Brown",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Product Launch",
             educations: [
                 {
@@ -194,10 +199,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550101",
             title: "UI Designer",
             linkedinURL: "https://linkedin.com/in/sophiaturner",
-            profileURL: "https://example.com/profiles/sophiaturner",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843508588-pngtree-cute-cartoon-avatar-icon-of-cool-man-wearing-glasses-and-black-vector-png-image_16306748.png",
             tranings: "06/10",
             documentation: "06/8",
             supervisor: "Chris Evans",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Mobile",
             educations: [
                 {
@@ -227,10 +233,10 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550102",
             title: "Backend Developer",
             linkedinURL: "https://linkedin.com/in/jameswilson",
-            profileURL: "https://example.com/profiles/jameswilson",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843508588-pngtree-cute-cartoon-avatar-icon-of-cool-man-wearing-glasses-and-black-vector-png-image_16306748.png",
             tranings: "08/10",
             documentation: "04/8",
-            supervisor: "Anna Scott",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "API Development",
             educations: [
                 {
@@ -260,10 +266,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550103",
             title: "Data Scientist",
             linkedinURL: "https://linkedin.com/in/emmaclark",
-            profileURL: "https://example.com/profiles/emmaclark",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843508588-pngtree-cute-cartoon-avatar-icon-of-cool-man-wearing-glasses-and-black-vector-png-image_16306748.png",
             tranings: "10/10",
             documentation: "08/8",
             supervisor: "Mark Taylor",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Predictive AI",
             educations: [
                 {
@@ -293,10 +300,9 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550104",
             title: "Full Stack Developer",
             linkedinURL: "https://linkedin.com/in/oliverking",
-            profileURL: "https://example.com/profiles/oliverking",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843571375-pngtree-handsome-young-guy-avatar-cartoon-style-png-image_1947775.jpg",
             tranings: "07/10",
             documentation: "05/8",
-            supervisor: "Nina Brooks",
             project: "E-commerce",
             educations: [
                 {
@@ -326,10 +332,9 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550105",
             title: "Business Analyst",
             linkedinURL: "https://linkedin.com/in/miaharris",
-            profileURL: "https://example.com/profiles/miaharris",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843571375-pngtree-handsome-young-guy-avatar-cartoon-style-png-image_1947775.jpg",
             tranings: "06/10",
             documentation: "04/8",
-            supervisor: "Paul Adams",
             project: "Process",
             educations: [
                 {
@@ -359,10 +364,9 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550106",
             title: "Mobile Developer",
             linkedinURL: "https://linkedin.com/in/lucaswright",
-            profileURL: "https://example.com/profiles/lucaswright",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843571375-pngtree-handsome-young-guy-avatar-cartoon-style-png-image_1947775.jpg",
             tranings: "08/10",
             documentation: "06/8",
-            supervisor: "Sophie Miller",
             project: "Mobile Banking",
             educations: [
                 {
@@ -392,10 +396,9 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550107",
             title: "Scrum Master",
             linkedinURL: "https://linkedin.com/in/charlottebaker",
-            profileURL: "https://example.com/profiles/charlottebaker",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "09/10",
             documentation: "07/8",
-            supervisor: "George Hall",
             project: "Agile",
             educations: [
                 {
@@ -425,10 +428,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550108",
             title: "Cloud Architect",
             linkedinURL: "https://linkedin.com/in/benjamincarter",
-            profileURL: "https://example.com/profiles/benjamincarter",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "10/10",
             documentation: "08/8",
             supervisor: "Rachel Moore",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Cloud",
             educations: [
                 {
@@ -458,10 +462,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550109",
             title: "Content Strategist",
             linkedinURL: "https://linkedin.com/in/ameliaevans",
-            profileURL: "https://example.com/profiles/ameliaevans",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "05/10",
             documentation: "03/8",
             supervisor: "Henry Young",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Brand Awareness",
             educations: [
                 {
@@ -491,10 +496,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550110",
             title: "Security Analyst",
             linkedinURL: "https://linkedin.com/in/henryscott",
-            profileURL: "https://example.com/profiles/henryscott",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "08/10",
             documentation: "06/8",
             supervisor: "Olivia Parker",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Security Audit",
             educations: [
                 {
@@ -524,10 +530,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550111",
             title: "HR Specialist",
             linkedinURL: "https://linkedin.com/in/gracelewis",
-            profileURL: "https://example.com/profiles/gracelewis",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "07/10",
             documentation: "05/8",
             supervisor: "Samuel Walker",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             educations: [
                 {
                     degree: "BSc Human Resources",
@@ -556,10 +563,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550112",
             title: "Network Engineer",
             linkedinURL: "https://linkedin.com/in/jackmartin",
-            profileURL: "https://example.com/profiles/jackmartin",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "09/10",
             documentation: "07/8",
             supervisor: "Ella Turner",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Network Upgrade",
             educations: [
                 {
@@ -589,7 +597,7 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550113",
             title: "Marketing Manager",
             linkedinURL: "https://linkedin.com/in/lilywalker",
-            profileURL: "https://example.com/profiles/lilywalker",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "08/10",
             documentation: "06/8",
             educations: [
@@ -620,10 +628,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550114",
             title: "Systems Administrator",
             linkedinURL: "https://linkedin.com/in/ethanhill",
-            profileURL: "https://example.com/profiles/ethanhill",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "07/10",
             documentation: "05/8",
             supervisor: "Chloe Allen",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Server Migration",
             educations: [
                 {
@@ -653,7 +662,7 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550115",
             title: "Technical Writer",
             linkedinURL: "https://linkedin.com/in/ellarobinson",
-            profileURL: "https://example.com/profiles/ellarobinson",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "06/10",
             documentation: "04/8",
             educations: [
@@ -684,10 +693,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550116",
             title: "Database Administrator",
             linkedinURL: "https://linkedin.com/in/williamyoung",
-            profileURL: "https://example.com/profiles/williamyoung",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "08/10",
             documentation: "06/8",
             supervisor: "Samantha Lee",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "Database Migration",
             educations: [
                 {
@@ -717,10 +727,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550117",
             title: "Project Coordinator",
             linkedinURL: "https://linkedin.com/in/avaperez",
-            profileURL: "https://example.com/profiles/avaperez",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "07/10",
             documentation: "05/8",
             supervisor: "Logan Scott",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             project: "ERP Implementation",
             educations: [
                 {
@@ -750,10 +761,11 @@ const seedCandidate = async () => {
             phoneNumber: "+12015550118",
             title: "Support Engineer",
             linkedinURL: "https://linkedin.com/in/noahramirez",
-            profileURL: "https://example.com/profiles/noahramirez",
+            profileURL: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750843685670-149071.png",
             tranings: "06/10",
             documentation: "04/8",
             supervisor: "Victoria Clark",
+            supervisorProfile: "https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750844034152-pngtree-male-profile-picture-icon-and-png-image-png-image_6118773.png",
             educations: [
                 {
                     degree: "BSc Information Systems",
