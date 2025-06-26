@@ -1,4 +1,4 @@
-import { DataSource } from "typeorm";
+import { DataSource, DataSourceOptions } from "typeorm";
 import { User } from "../models/User";
 import { Candidate } from "../models/Candidate";
 import { Job } from "../models/Job";
@@ -9,28 +9,28 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const AppDataSource = new DataSource({
-    type: "postgres",
+const isSslEnabled = process.env.DB_SSL === 'true';
+
+const baseConfig: DataSourceOptions = {
+    type: 'postgres',
     host: process.env.DB_HOST,
-    port: parseInt(process.env.DB_PORT || "5432", 10),
+    port: parseInt(process.env.DB_PORT || '5432', 10),
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    entities: [
-        User,
-        Candidate,
-        Job,
-        AuditLog,
-    ],
+    entities: [User, Candidate, Job, AuditLog],
     synchronize: true,
-    ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
-    extra: {
-        ssl: {
-            rejectUnauthorized: false, // Accept self-signed certs (for dev only)
-        },
-    },
+};
 
-});
+export const AppDataSource = new DataSource(
+    isSslEnabled
+        ? {
+            ...baseConfig,
+            ssl: { rejectUnauthorized: false },
+            extra: { ssl: { rejectUnauthorized: false } },
+        }
+        : baseConfig // 🔥 important: do NOT include ssl at all
+);
 
 export const connectDB = async () => {
     try {
