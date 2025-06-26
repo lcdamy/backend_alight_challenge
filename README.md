@@ -96,6 +96,26 @@ backend_alight_challenge/
 ├── package.json        # Project metadata and dependencies
 └── README.md
 ```
+## 🐳 Running with Docker
+
+To run this application using Docker, follow these steps:
+
+1. Ensure Docker and Docker Compose are installed on your machine.
+2. Clone both the backend and frontend repositories into the same parent directory.
+3. Navigate to the backend project folder:
+
+    ```bash
+    cd backend_Alight_Challenge
+    ```
+
+4. Start the services with Docker Compose:
+
+    ```bash
+    docker-compose --env-file .env.custom up --build
+    ```
+
+> **Note:** Make sure your `.env.custom` file is properly configured before running the command.
+
 
 ## 👥 Contributors
 
