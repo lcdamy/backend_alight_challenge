@@ -60,6 +60,7 @@ services:
       - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
       - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
       - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+      - API_URL=${API_URL}
     networks:
       - alight_network
     restart: unless-stopped
