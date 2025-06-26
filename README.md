@@ -86,15 +86,14 @@ backend_alight_challenge/
 │   ├── seeds/          # Contains three files which are used to seeds the database, for at least some initial data
 │   ├── services/       # Contains service layer logic to encapsulate business rules and support the MVC architecture
 │   ├── templates/      # Contains templates; currently includes a single template used by the email service
-│   ├── utils/          # Contains utility functions and helpers, including email service, general helpers, and validation logic
-│   ├── app.ts
-│   └── main.tsx
-├── .env
-├── .gitignore
-├── combined.log
-├── docker-compose.yml
-├── Dockerfile
-├── package.json
+│   ├── utils/          # Utility functions and helpers (e.g., email service, general utilities, validation)
+│   └── app.ts          # Main application entry point
+├── .env                # Environment variable definitions
+├── .gitignore          # Git ignore rules
+├── combined.log        # Log output file
+├── docker-compose.yml  # Docker Compose configuration
+├── Dockerfile          # Docker build instructions
+├── package.json        # Project metadata and dependencies
 └── README.md
 ```
 

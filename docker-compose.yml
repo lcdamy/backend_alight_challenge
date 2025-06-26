@@ -23,7 +23,7 @@ services:
       - GMAIL_EMAIL=zudanga@gmail.com
       - GMAIL_PASSWORD=spbb bnsw ziol htbz
       - LOGO_URL=https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750462403519-Group%202635.png
-      - DB_SSL=false
+      - DB_SSL=true
     networks:
       - alight_network
 
@@ -31,8 +31,10 @@ services:
     image: postgres:latest
     platform: linux/x86_64
     ports:
-      - "10901:5432"
+      - "5432:10901"
     environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_PORT=5432
       - POSTGRES_DB=defaultdb
       - POSTGRES_USER=avnadmin
       - POSTGRES_PASSWORD=AVNS_4fG2dirdBzNwc6QEnhU
