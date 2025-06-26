@@ -9,19 +9,19 @@ services:
     depends_on:
       - postgres
     environment:
-      - HOST=backend
-      - PORT=3001
-      - TOKEN_SECRET=408048284902KNJKJ0423-4023NKKNN-NFJNIO0230J000-ISHDU0
-      - FRONTEND_URL=http://localhost:3002
-      - DB_HOST=postgres
-      - DB_PORT=5432
-      - DB_USERNAME=postgres
-      - DB_PASSWORD=Zudanga@12345
-      - DB_NAME=defaultdb
-      - GMAIL_EMAIL=zudanga@gmail.com
-      - GMAIL_PASSWORD=spbb bnsw ziol htbz
-      - LOGO_URL=https://rci-files.lon1.digitaloceanspaces.com/rci-files/1750462403519-Group%202635.png
-      - DB_SSL=false
+      - HOST=${HOST}
+      - PORT=${ports}
+      - TOKEN_SECRET=${TOKEN_SECRET}
+      - FRONTEND_URL=${FRONTEND_URL}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - GMAIL_EMAIL=${GMAIL_EMAIL}
+      - GMAIL_PASSWORD=${GMAIL_PASSWORD}
+      - LOGO_URL=${LOGO_URL}
+      - DB_SSL=${DB_SSL}
     networks:
       - alight_network
     restart: unless-stopped
@@ -33,9 +33,9 @@ services:
       - "5432:5432"
     environment:
       - POSTGRES_PORT=5432
-      - POSTGRES_DB=defaultdb
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=Zudanga@12345
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
@@ -50,10 +50,10 @@ services:
     depends_on:
       - backend
     environment:
-      - GOOGLE_CLIENT_ID=120025142035-9rjd81fca71ffp9h6ug78fpp2spt6nk6.apps.googleusercontent.com
-      - GOOGLE_CLIENT_SECRET=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
-      - NEXTAUTH_SECRET=DSFSDGFGTRETTRBGFGFDSFDSFDSFDSF
-      - NEXT_PUBLIC_API_URL=http://localhost:3003/api/v1
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
     networks:
       - alight_network
     restart: unless-stopped

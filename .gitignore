@@ -17,6 +17,7 @@ yarn-error.log*
 
 # Environment variables
 .env
+.env.custom
 
 # IDE files
 .vscode/
