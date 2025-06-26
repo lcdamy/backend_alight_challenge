@@ -9,6 +9,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const useSsl = process.env.DB_SSL === 'true';
+
 export const AppDataSource = new DataSource({
     type: "postgres",
     host: process.env.DB_HOST,
@@ -23,13 +25,14 @@ export const AppDataSource = new DataSource({
         AuditLog,
     ],
     synchronize: true,
-    ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
-    extra: {
-        ssl: {
-            rejectUnauthorized: false, // Accept self-signed certs (for dev only)
-        },
-    },
-
+    ssl: useSsl ? { rejectUnauthorized: false } : false,
+    extra: useSsl
+        ? {
+            ssl: {
+                rejectUnauthorized: false,
+            },
+        }
+        : {},
 });
 
 export const connectDB = async () => {

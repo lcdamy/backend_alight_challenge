@@ -245,7 +245,7 @@ const sendWelcomeEmail = async (user: any, role: string, type: string) => {
         year: new Date().getFullYear(),
         logo_url: process.env.LOGO_URL,
         subject: 'Welcome to Alight HR platform',
-        name: user.names,
+        name: user.firstname,
         message: '',
         link: '',
         link_label: 'Verify your account'
@@ -254,6 +254,7 @@ const sendWelcomeEmail = async (user: any, role: string, type: string) => {
     const sendEmailWithContext = async (message: string, linkLabel: string) => {
         const token = generateToken({ email: user.email }, 86400);
         context.message = message;
+
         context.link_label = linkLabel;
         context.link = `${frontend_host}/login?token=${token}`;
         sendEmail('email_template', 'Welcome to Alight HR platform', user.email, context);
