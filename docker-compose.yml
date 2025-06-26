@@ -5,20 +5,18 @@ services:
     image: lcdamy/backend-alight-challenge:1.0
     platform: linux/x86_64
     ports:
-      - "3003:3001"  # host:container
+      - "3003:3001"
     depends_on:
       - postgres
     environment:
       - HOST=backend
       - PORT=3001
       - TOKEN_SECRET=408048284902KNJKJ0423-4023NKKNN-NFJNIO0230J000-ISHDU0
-      - FRONTEND_URL=http://frontend:3000
-      - BASE_URL=http://backend:3001/
-      - API_URL=http://backend:3001/api/v1
+      - FRONTEND_URL=http://localhost:3002
       - DB_HOST=postgres
       - DB_PORT=5432
       - DB_USERNAME=postgres
-      - DB_PASSWORD=Zudanga@1
+      - DB_PASSWORD=Zudanga@12345
       - DB_NAME=defaultdb
       - GMAIL_EMAIL=zudanga@gmail.com
       - GMAIL_PASSWORD=spbb bnsw ziol htbz
@@ -37,7 +35,7 @@ services:
       - POSTGRES_PORT=5432
       - POSTGRES_DB=defaultdb
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=Zudanga@1
+      - POSTGRES_PASSWORD=Zudanga@12345
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
@@ -55,9 +53,7 @@ services:
       - GOOGLE_CLIENT_ID=120025142035-9rjd81fca71ffp9h6ug78fpp2spt6nk6.apps.googleusercontent.com
       - GOOGLE_CLIENT_SECRET=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
       - NEXTAUTH_SECRET=DSFSDGFGTRETTRBGFGFDSFDSFDSFDSF
-      - NEXTAUTH_URL=http://localhost:3002
-      - NEXT_PUBLIC_API_URL=http://backend:3001
-      - NEXT_PUBLIC_FRONTEND_URL=http://localhost:3002
+      - NEXT_PUBLIC_API_URL=http://localhost:3003/api/v1
     networks:
       - alight_network
     restart: unless-stopped
